@@ -1,0 +1,56 @@
+🧠 Why This Is Important
+
+Traditional Deployment:
+100% Users
+     │
+     ▼
+New Version
+
+❌ Risk if bugs exist
+
+Canary Deployment:
+100% Traffic
+      │
+      ▼
+ ┌───────────────┐
+ │ 90% → v1      │
+ │ 10% → v2      │
+ └───────────────┘
+
+If the new version works well:
+10% → 25% → 50% → 100%
+
+If issues are detected:
+
+100% → Old Version
+
+Benefits:
+✅ Gradual rollout
+✅ Reduced deployment risk
+✅ Easy rollback
+✅ Real user validation
+✅ Zero downtime
+
+Used By :
+Google
+Netflix
+Facebook
+Amazon
+Spotify
+
+🛠 Tech Stack
+Python
+Flask
+Docker
+Kubernetes
+
+📂 Project Structure
+canary-deployment/
+│
+├── app.py
+├── Dockerfile
+├── deployment-v1.yaml
+├── deployment-v2.yaml
+├── service.yaml
+├── ingress.yaml
+└── README.md
